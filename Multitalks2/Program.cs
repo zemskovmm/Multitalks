@@ -4,21 +4,30 @@ public class Program
 {
     public static int Main()
     {
-        //var example = new MutexExample();
+        SyncFixture();
 
-        //Parallel.For(0, 100, i => example.Add(i));
+        DeadlockFixture();
 
+        Thread.Sleep(20000);
+        System.Console.WriteLine("That`s all folks!");
+        return 0;
+    }
+
+    private static void DeadlockFixture()
+    {
         var sw = new Stopwatch();
 
         sw.Start();
         Deadlock1();
         sw.Stop();
-
         System.Console.WriteLine($"It took {sw.ElapsedMilliseconds}ms to run the section.");
+    }
 
-        Thread.Sleep(20000);
-        System.Console.WriteLine("That`s all folks!");
-        return 0;
+    private static void SyncFixture()
+    {
+        var example = new MutexExample();
+
+        Parallel.For(0, 100, i => example.Add(i));
     }
 
     private static void Deadlock1()
