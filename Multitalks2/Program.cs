@@ -21,6 +21,19 @@ public class Program
         Deadlock1();
         sw.Stop();
         System.Console.WriteLine($"It took {sw.ElapsedMilliseconds}ms to run the section.");
+
+
+        /// STA Deadlock
+        Console.WriteLine("Starting Main()");
+        var result = DeadlockSTAExample().Result; // Blocking on an async method
+        Console.WriteLine(result);
+    }
+
+    static async Task<string> DeadlockSTAExample()
+    {
+        Console.WriteLine("Starting DeadlockExample()");
+        await Task.Delay(1000); // Asynchronous operation
+        return "Hello, World!";
     }
 
     private static void SyncFixture()

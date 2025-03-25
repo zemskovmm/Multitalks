@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Multitalks2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bde0430fc36fe357f3a68a260c81c6d721a65158")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7a59a84d2fd8e59b9c0542e7b5679642df954de")]
 [assembly: System.Reflection.AssemblyProductAttribute("Multitalks2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Multitalks2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
